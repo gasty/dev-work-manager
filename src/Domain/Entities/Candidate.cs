@@ -34,6 +34,22 @@ namespace Domain
             SocialNetworksList = new List<SocialNetworkProfile>();
         }
 
+        public Candidate(string _firstName, string _middleName, string _lastName, GenderType _gender, Contact _contact)
+        {
+            FirstName = _firstName;
+            MiddleName = _middleName;
+            LastName = _lastName;
+            BirthdayDate = new DateTime();
+            Gender = _gender;
+            RelocationAgreement = false;
+            PhonesList = new List<PhoneNumber>();
+            //photo
+
+            ContacsList = new List<Contact>();
+            ContacsList.Add(_contact);
+            SocialNetworksList = new List<SocialNetworkProfile>();
+        }
+
         public virtual string FirstName
         {
             get
